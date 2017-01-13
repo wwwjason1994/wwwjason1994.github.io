@@ -1,0 +1,105 @@
+|撤销修改
+==========================================
+#撤销工作区里面的效果
+git checkout -- <filename>
+//用暂存区里的内容 覆盖工作区的内容
+//git diff 查看暂存区课工作区的区别
+
+#用历史区 还原暂存区的内容
+git reset [<HEAD>] <filename>
+//git diff --cached 可以查看暂存区和历史区的差异
+#git reset <commit> -- <filename>
+//按照指定的commit历史记录还原 暂存区
+
+#用别的历史提交的内容还原暂存区和历史区
+git checkout <commit> -- <filename>
+
+#清除掉不想要的文件 clean 会清理暂存区中没有的文件
+git clean -n //查看开将要清理的文件
+git clean -f //清理不要的文件 -df 删除文件以及目录
+#.gitignore 文件进行设置忽略的文件
+git clean -X -f //会把.gitignore文件里忽略的文件清理掉
+git clean -x //会把包含 .gitinore里忽略文件在内的文件一起清理
+
+#有一些已经提交的内容不想要，产生新的提交覆盖旧的提交
+git revert HEAD
+ 
+
+
+|Git 中 push.default 配置的作用
+==========================================
+#upstream 是远程仓库名 localfeature是本地分支名 feature远程分支名
+#本地分支名和远程分支名不同的情况下执行 push操作
+git push upstream localfeature
+git push upstream HEAD
+//都等价于 git push upstream localfeature:localfeature 得不到想要的效果
+git push upstream 
+//省略了 refspec 就等于把 所有分支发送到upstream中 得不到想要的效果
+git push upstream :
+//会把所有已经跟踪的分支都更新上远程，但是localfeature的则不会
+git push 
+//repository都省略的话 在localfeature分支进行操作的话  默认使用branch.localfeature.romote配置.没有配置的话用origin 得不到想要的效果
+#一下才是正确的
+git push upstream localfeature:feature 
+//最稳妥的方式，本地的localfeature的信息发送到远程的feature中去
+#还可以在 config中添加：
+[remote "upstream"]
+	push = refs/heads/localfeature:refs/heads/feature
+
+
+#创建一个localfeature分支，然后把远程跟踪分支指向upstream/feature
+git checkout -b localfeature -t upstream/feature
+#删除跟踪分支的配置,在 localfeature分支下进行操作
+git brach --unset-upstream
+
+#为了省略上面繁琐的操作和分支名写错等问题，git推出了push.default操作
+[push]
+	default = [nothing | current | upstream | simple | matching]
+push.default 配置的作用：
+nothing -除非明确的给了refspec参数，否则不推动任何内容。这个模式重要是为了那些希望显示声明refspec参数来避免错误推送的人设计的
+current -推送当前分支用来更新接收端同名的分支。central以及non-central的工作流都是可以使用这个模式的（没有本分支就在远程仓库中创建）
+upstream -如果当前分支配置了[branch]跟踪分支，push操作就把当前分支内容推送到它跟踪的远程分支上。只有在你推送的repository时你pull操作通常使用的那个repository的时候使用这个模式才合理。
+simple -git2.0以后成为默认值,在centralize工作流里，跟upstream模式一样，但是如果你本地当前分支的名字与你当前的更正分支名字不一致的话，git将拒绝push操作。当你push的repository并不是你通常pull的那个仓库时，跟current模式一样。
+matching -把在本地和远程都有的同名分支的所有分支内容全部推送至远程repository。git2.0以前是默认值
+
+|使用 Git 进行问题定位以及代码查找
+===============================================
+#使用git blame定位代码责任人
+git blame <filename> 
+//得到每一行内容责任人
+git blame -L 1,3 <filename>
+//输出文件中第1行到第3行的代码责任人
+git blame -L 5,+10 <filename>
+//+10是偏移量
+
+#使用git bisect查找问题引入的版本
+git bisect start //开始bisect
+git bisect bad //标记有问题的版本
+git bisect good <commit>//标记没问题的版本
+git bisect bad //到bad的前面中去查找 如果是bad设置成bad
+git bisect good //如果是good设置成goof
+//直到good的下一个是bad就可以查到那个是问题引入的版本了
+git bisect reset //然后取消bisect操作
+git diff <前commit> <后commit> //查看和前面内容的不同
+git bisect skip //可以跳过当前的commit不设置bad good
+git bisect log > bisect.log //把bisect的记录放到文件中
+//如果之前good或者bad 输错了可以在bisect.log中修改
+git bisect reset //先推出bisect
+git bisect replay bisect.log //重新开始bisect
+
+#使用git grep 查找指定内容的位置
+git grep <something> //在所有文件中查找something这个字符串
+git grep -n <something> //-n 显示行号
+git grep --count <something> //--count 出现次数
+git grep -p <somethin> <filename 如：*.c>//-p 那些方法或者函数含有something字符串
+git grep -e '<reg>' //-e 正则表单是进行匹配
+git grep -e 'zhangsan' --or -e 'wangwu' //--or 或者,也可以省略--or
+--or --and --not (括号)
+git grep -e '<reg>' HEAD~ //还可以搜索前一个版本
+
+#使用git log查看指定内容的历史记录
+git log -S<something> --oneline//-S后面不需要空格，输出的是引入something的commit
+git log -G  //可以看到所有改变过something 这一行的commit
+git log -L :<something>:<filename> //得到filename文件中something所在行变更的历史
+git log -L 'function',/^}/:<filename> //filename文件中以function开头以}结尾的内容的历史
+git log -L 2,5:<filename> //第2行到第5行 +10 偏移量
