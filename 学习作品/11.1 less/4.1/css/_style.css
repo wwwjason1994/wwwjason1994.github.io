@@ -1,0 +1,1268 @@
+/*初始化*/
+body{
+    background: #f5f5f5;
+    outline: none;
+}
+.cf{
+    clear: both;
+    zoom: 1;
+}
+.cf:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+/*顶部导航-start*/
+header{
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+    position: relative;
+}
+header .w-1000{
+    width: 1000px;
+    margin: 0 auto;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+}
+header .logo{
+    width: 109px;
+    display: inline-block;
+    margin-right: 60px;
+    height: 60px;
+    float: left;
+}
+header .logo img{
+    float: left;
+    width: 109px;
+    margin-top: 10px;
+    border: 0 none;
+}
+/*导航栏*/
+header nav {
+    height: 60px;
+    display: inline-block;
+    float: left;
+}
+header nav li {
+    position: relative;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 50px;
+    cursor: pointer;
+    height: 60px;
+    float: left;
+    vertical-align: middle;
+}
+.arrow-icon {
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid #c1c1c1;
+    border-left: 1px solid #c1c1c1;
+    display: inline-block;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform-origin: 4px 4px;
+}
+header nav li i.arrow-icon {
+    margin-bottom: 2px;
+}
+header nav li:hover i.arrow-icon{
+    margin-bottom: -2px;
+    border-color: #35b558;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    animation: rotate 1s ease normal;
+    -moz-animation: rotate 1s ease normal;
+    -webkit-animation: rotate 1s ease normal;
+}
+@keyframes rotate
+{
+    from{
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+    }
+    to{
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+    }
+
+}
+nav li i {
+    margin-left: 5px;
+}
+/*下拉框*/
+header nav .submenu {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    z-index: 1000;
+    top: 60px;
+    left: 0;
+    background: #fff;
+    font-size: 12px;
+    color: #666;
+    width: 280px;
+    border-top: 1px solid #ececec;
+}
+header nav .submenu h3 {
+    margin: 10px 0;
+    padding: 0 15px;
+    background: #fafafa;
+    height: 28px;
+    line-height: 28px;
+    font-weight: 300;
+}
+header nav a {
+    color: #333;
+}
+header nav .submenu a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+}
+header nav .vip-lesson a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+}
+header nav .vip-lesson a span {
+    color: #bbb;
+    float: right;
+}
+.vip-lesson i, .school-list i {
+    background: url(../images/allicon.png) 0 0 no-repeat;
+    background-size: 64px 64px;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 10px!important;
+}
+.school-list i.python-icon,
+.school-list i.go-icon,
+.school-list i.ios-icon{
+    background: url(../images/allicon3.png) 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 16px 148px;
+}
+.school-list .web-icon {
+    background-position: -15px -27px;
+}
+.school-list i.python-icon {
+    background-position: -2px -2px;
+}
+.school-list i.go-icon {
+    background-position: -2px -38px;
+}
+.school-list i.ios-icon {
+    background-position: -2px -82px;
+}
+#header nav .submenu a:last-child {
+    padding-bottom: 10px;
+}
+.vip-lesson .kck-icon{
+    background-position: 0 -13px;
+}
+.vip-lesson .zyljt-icon {
+    background-position: -45px 0;
+}
+.vip-lesson .zstxt-icon {
+    background-position: -30px -13px;
+}
+.vip-lesson .xlkc-icon {
+    background: url(../images/xlkc2.png) 0 0 no-repeat;
+    background-position: 0 0;
+    background-size: 12px 12px;
+}
+.vip-lesson .kcbq-icon{
+    background-position: -15px -13px;
+}
+.vip-lesson .vip-icon{
+    background-position: -16px 0;
+}
+.vip-lesson .jswd-icon{
+    background-position: 0 -27px;
+}
+.vip-lesson .wiki-icon{
+    background-position: -29px -27px;
+}
+.vip-lesson .sq-icon{
+    background-position: 0 2px;
+}
+.vip-lesson .zygx-icon{
+    background-position: -30px 0;
+}
+
+/*右边icon*/
+header .icon-box {
+    float: right;
+    text-align: right;
+    width: 200px;
+    margin-right: 10px;
+    height: 60px;
+}
+header .icon-box span {
+    height: 60px;
+    width: 17px;
+    display: inline-block;
+    margin-left: 25px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+header .icon-box .app-icon .submenu {
+    padding: 0;
+    right: -50px;
+}
+.loginlist .submenu {
+    display: none;
+    opacity: 0;
+    padding: 10px 0;
+    background: #fff;
+    position: absolute;
+    width: 120px;
+    z-index: 1200;
+    top: 60px;
+    right: -10px;
+}
+header .search-icon {
+    background: url(../images/search-icon.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+    height: 17px;
+    width: 17px;
+    display: inline-block;
+    vertical-align: middle;
+}
+header .icon-box .app-icon {
+    background: url(../images/app-icon.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+}
+header .icon-box .login-icon {
+    background: url(../images/login-icon.png) 0 0 no-repeat;
+    background-size: 17px;
+    background-position: 0;
+}
+.icon-box .loginlist{
+    position: relative;
+}
+.loginlist .submenu .top-icon {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    border-top: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+    display: inline-block;
+    background: #fff;
+}
+header .icon-box .app-icon .submenu .top-icon {
+    right: 50px;
+}
+.loginlist .submenu dd {
+    text-align: left;
+    font-size: 12px;
+    line-height: 35px;
+    vertical-align: middle;
+    margin: 0;
+    padding-left: 10px;
+}
+.loginlist .submenu dd a {
+    color: #666;
+    height: 35px;
+    line-height: 35px;
+    display: block;
+}
+.loginlist .submenu dd a.reg-btn,
+.loginlist .submenu dd a.login-btn {
+    width: 45%;
+    height: 35px;
+    line-height: 35px;
+    display: inline-block;
+    text-align: center;
+}
+header .loginlist dd i{
+    background: url(../images/allicon2.png) 0 0 no-repeat;
+    background-size: 64px 64px;
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+    display: inline-block;
+}
+.loginlist .xxzx-icon {
+    background-position: -16px -15px;
+}
+.loginlist .grzy-icon {
+    background-position: -45px -1px;
+}
+.loginlist .xxtz-icon {
+    background-position: -16px -30px;
+}
+.loginlist .zhsz-icon {
+    background-position: -30px -1px;
+}
+/*hover鼠标悬停*/
+header nav li:hover, header a:hover{
+    color: #35b558;
+    cursor: pointer;
+}
+header nav li a:hover,
+header .loginlist dd:hover{
+    background: #f5f5f5;
+    color: #35b558;
+}
+header nav li a:hover,
+header .loginlist dd:hover a{
+    color: #35b558;
+}
+header .icon-box .app-icon:hover {
+    background: url(../images/app-icon2.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0;
+}
+header .search-icon:hover {
+    background: url(../images/search-icon2.png) 0 0 no-repeat;
+    background-size: 17px 17px;
+    background-position: 0, 0;
+}
+header nav ul li:nth-child(2):hover .submenu{
+    display: block;
+    opacity: 1;
+}
+header nav ul li:nth-child(3):hover .submenu{
+    display: block;
+    opacity: 1;
+}
+header nav ul li:nth-child(4):hover .submenu{
+    display: block;
+    opacity: 1;
+}
+header .icon-box span:nth-child(2):hover .submenu{
+    display: block;
+    opacity: 1;
+}
+header .icon-box span:nth-child(3):hover .submenu{
+    display: block;
+    opacity: 1;
+}
+/*搜索框*/
+header .searchbox {
+    display: none;
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    /*transform: scale(0.1, 1);*/
+    /*-moz-transform: scale(0.1, 1);*/
+    height: 59px;
+    line-height: 59px;
+    background: #fff;
+    position: absolute;
+    z-index: 11000;
+    top: 0;
+    right: 0;
+}
+header .searchbox .close-icon {
+    width: 15px;
+    height: 15px;
+    margin-top: 22px;
+    cursor: pointer;
+    background: url(http://e.jikexueyuan.com/headerandfooter/images/close-icon.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;
+    z-index: 1200;
+}
+header .searchbox input {
+    width: 400px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    font-size: 12px;
+    vertical-align: top;
+    margin-left: 10px;
+}
+#web_search_header {
+    border: none;
+    outline: none;
+}
+header .searchbox .tagbox {
+    width: 300px;
+    text-align: right;
+    display: inline;
+    margin-right: 50px;
+    float: right;
+}
+header .searchbox .tagbox a {
+    font-size: 12px;
+    color: #808080;
+    background: #f5f5f5;
+    padding: 3px 5px;
+    margin-left: 10px;
+}
+
+/*顶部导航-end*/
+
+/*中间内容-start*/
+/*第一项*/
+article .w-1000{
+    clear: both;
+    width: 1000px;
+    margin: 0 auto;
+}
+article .con_row_1{
+    margin-top: 20px;
+}
+article .con_row_1 .jk-banner{
+    height: 330px;
+    width: 750px;
+    background: #ffffff;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+}
+article .jk-banner .banner-container{
+    width: 100%;
+    height: 100%;
+}
+.con_row_1 .jk-login{
+    float: left;
+    width: 240px;
+    height: 160px;
+    border: 1px solid #e9e9e9;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 26px 29px 24px;
+}
+.jk-login .userInfo {
+    height: 57px;
+}
+.jk-login .userInfo img {
+    float: left;
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.jk-login .userName {
+    float: left;
+    font-size: 12px;
+    color: #555;
+    line-height: 16px;
+    height: 16px;
+    width: 108px;
+    margin-top: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.jk-login .userStatus {
+    float: left;
+    font-size: 12px;
+    color: #555;
+    line-height: 16px;
+    height: 16px;
+    width: 108px;
+    margin-top: 10px;
+}
+.jk-login .loginOn, .jk-login .registerNow{
+    box-sizing: border-box;
+    font-size: 14px;
+    float: left;
+    display: inline-block;
+    width: 85px;
+    height: 32px;
+    border: 1px solid #35b558;
+    border-radius: 2px;
+    color: #35b558;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background .8s;
+    -moz-transition: background .8s;
+    -webkit-transition: background .8s;
+    -o-transition: background .8s;
+}
+.jk-login .loginOn:hover,
+.jk-login .registerNow:hover{
+    color: #ffffff;
+    background: #35b558;
+}
+.jk-login .loginOn {
+    margin-right: 10px;
+}
+.con_row_1 .jk-huodong{
+    float: left;
+    width: 240px;
+    height: 160px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.con_row_1 .jk-jiuye {
+    float: left;
+    height: 130px;
+    width: 100%;
+    margin-top: 20px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.jk-jiuye .jiuyeBan{
+    float: left;
+    width: 200px;
+    height: 130px;
+    box-sizing: border-box;
+    border: 1px solid #f0f0f0;
+    border-left: 0;
+    color: #555;
+    text-align: center;
+    padding-top: 90px;
+    font-size: 12px;
+    transition: color .5s;
+    -moz-transition: color .5s;
+    -webkit-transition: color .5s;
+    -o-transition: color .5s;
+}
+.jk-jiuye .jiuyeBan:hover{
+    color: #35b558;
+}
+.jk-jiuye .jiuyeBan:nth-child(1){
+    border-left: 1px solid #f0f0f0;
+    background: url(../images/content/jphp_d405f8a.png) no-repeat center 20px;
+    background-size: 130px 65px;
+}
+.jk-jiuye .jiuyeBan:nth-child(1) i{
+    display: inline-block;
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    top: 0;
+    left: 0;
+    background: url(../images/content/tag_8332cd6.png) no-repeat center;
+    background-size: 52px 52px;
+}
+.jk-jiuye .jiuyeBan:nth-child(2) {
+    background: url(../images/content/jweb_95cd305.png) no-repeat center 20px;
+    background-size: 130px 65px;
+}
+.jk-jiuye .jiuyeBan:nth-child(3) {
+    background: url(../images/content/jandroid_aa0f1c1.png) no-repeat center 20px;
+    background-size: 130px 65px;
+}
+.jk-jiuye .jiuyeBan:nth-child(4) {
+    background: url(../images/content/jios_e6eb57b.png) no-repeat center 20px;
+    background-size: 130px 65px;
+}
+.jk-jiuye .jiuyeBan:nth-child(5) {
+    background: url(../images/content/jjava_fb540b7.png) no-repeat center 20px;
+    background-size: 130px 65px;
+}
+/*第二项*/
+article .jk-sku {
+    width: 1000px;
+    height: 270px;
+    margin: 0 auto;
+    margin-top: 20px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+}
+.jk-sku ul{
+    width: 100%;
+    height: 100%;
+}
+.jk-sku ul li{
+    box-sizing: border-box;
+    float: left;
+    width: 235px;
+    height: 100%;
+    margin-right: 20px;
+    border: 1px solid #e9e9e9;
+    transition: box-shadow .5s;
+    -moz-transition: box-shadow .5s;
+    -webkit-transition: box-shadow .5s;
+    -o-transition: box-shadow .5s;
+}
+.jk-sku ul li:last-child{
+    margin-right: 0;
+}
+.jk-sku ul li:hover{
+    -webkit-box-shadow: 0  1px 5px #d1d1d1;
+    -moz-box-shadow: 0 1px 5px #d1d1d1;
+    box-shadow: 0 1px 5px #d1d1d1;
+}
+.jk-sku li .sku_container{
+    height: 85px;
+    padding: 14px;
+    position: relative;
+    background: #ffffff;
+}
+.jk-sku li .sku_container .sku_title{
+    width: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    color: #555;
+    line-height: 18px;
+    height: 36px;
+}
+.jk-sku li .sku_container .sku_info{
+    margin-top: 6px;
+    color: #999;
+    font-size: 12px;
+    line-height: 16px;
+    height: 16px;
+}
+.sku_container span{
+    display: block;
+}
+.sku_container .sku_price {
+    float: left;
+    font-size: 18px;
+    color: #ff5c00;
+    vertical-align: bottom;
+    margin-right: 5px;
+    margin-top: 8px;
+}
+.sku_container .sku_throught{
+    float: left;
+    font-size: 12px;
+    color: #999;
+    margin-top: 14px;
+    text-decoration: line-through;
+    vertical-align: bottom;
+}
+.sku_container .sku_num{
+    height: 14px;
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    color: #999;
+    font-size: 12px;
+}
+/*第三项“职业学院”*/
+.jk-college{
+    width: 1000px;
+    margin: 0 auto;
+}
+.jk-college .college_content{
+    width: 100%;
+    height:310px;
+    margin-bottom: 40px;
+}
+.jk-college h2 {
+    font-size: 18px;
+    color: #555;
+    line-height: 18px;
+    height: 18px;
+    margin-bottom: 22px;
+}
+.jk-college ul li {
+    float: left;
+    background: #ccc;
+    width: 240px;
+    height: 130px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.jk-college ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.jk-college ul .web {
+    width: 500px;
+    height: 270px;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+.jk-college ul .web img {
+    display: inline-block;
+    width: 500px;
+    height: 270px;
+}
+.jk-college ul li img {
+    display: inline-block;
+    width: 240px;
+    height: 130px;
+}
+.jk-college ul li i {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    transition: opacity .8s;
+    -moz-transition: opacity .8s;
+    -webkit-transition: opacity .8s;
+    -o-transition: opacity .8s;
+}
+.jk-college ul li:hover i{
+    opacity: 0.3;
+}
+.jk-college ul li span {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    padding-top: 88px;
+}
+.jk-college ul .web span {
+    padding-top: 180px;
+    font-size: 20px;
+    background: url(../images/content/cweb_2d70d0b.png) no-repeat center 70px;
+    background-size: 55px 84px;
+}
+.jk-college ul .python span {
+    background: url(../images/content/cpython_5ed9df4.png) no-repeat center 31px;
+    background-size: 36px 36px;
+}
+.jk-college ul .go span {
+    background: url(../images/content/cgo_e66208d.png) no-repeat center 33px;
+    background-size: 36px 29px;
+}
+.jk-college ul .ios span {
+    background: url(../images/content/cios_dc0ca8e.png) no-repeat center 36px;
+    background-size: 32px 36px;
+}
+.jk-college ul .more span {
+    background: url(../images/content/cmore_1bdb357.png) no-repeat center 36px;
+    background-size: 36px 36px;
+}
+/*第四项会员课程*/
+.jk-vip{
+    width: 1000px;
+    margin: 0 auto;
+    height: 420px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+.jk-vip h2{
+    font-size: 18px;
+    color: #555;
+    line-height: 18px;
+    height: 18px;
+    margin-bottom: 22px;
+}
+.jk-vip ul li{
+    float: left;
+    width: 156px;
+    height: 148px;
+    border: 1px solid #e9e9e9;
+    background: #ffffff;
+    margin-right: 10px;
+    transition: background .8s;
+    -moz-transition: background .8s;
+    -webkit-transition: background .8s;
+    -o-transition: background .8s;
+}
+.jk-vip ul li:hover{
+    -webkit-box-shadow: 0  1px 5px #d1d1d1;
+    -moz-box-shadow: 0 1px 5px #d1d1d1;
+    box-shadow: 0 1px 5px #d1d1d1;
+}
+.jk-vip ul li:nth-child(6),
+.jk-vip ul li:nth-child(12){
+    margin-right: 0;
+}
+.jk-vip ul li:nth-child(n+7) {
+    margin-top: 10px;
+}
+.jk-vip ul li a {
+    display: block;
+    height: 100%;
+    text-align: center;
+}
+.jk-vip ul li a img {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    margin-top: 25px;
+}
+.jk-vip ul li a p {
+    font-size: 12px;
+    color: #555;
+    height: 22px;
+    line-height: 22px;
+}
+.jk-vip ul li a span {
+    display: block;
+    font-size: 12px;
+    color: #35b558;
+    height: 22px;
+    line-height: 22px;
+}
+.jk-vip .vipAll {
+    display: inline-block;
+    margin-top: 38px;
+    height: 32px;
+    line-height: 30px;
+    border: 1px solid #35b558;
+    border-radius: 2px;
+    width: 120px;
+    font-size: 14px;
+    color: #35b558;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    margin-left: -60px;
+    transition: background .8s;
+    -moz-transition: background .8s;
+    -webkit-transition: background .8s;
+    -o-transition: background .8s;
+}
+.jk-vip .vipAll:hover{
+    background: #35b558;
+    color: #fff;
+}
+/*第五项学员故事*/
+.jk-story{
+    width: 1000px;
+    margin: 0 auto;
+    height: 300px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.jk-story h2 {
+    font-size: 18px;
+    color: #555;
+    line-height: 18px;
+    height: 18px;
+    margin-bottom: 22px;
+}
+.jk-story .story-container{
+    width: 100%;
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+}
+.jk-story .story-container .banner{
+    width: 3100px;
+    height: 100%;
+}
+.jk-story .story-container .story-sliding{
+    float: left;
+    width: 1000px;
+    height: 100%;
+}
+.story-sliding ul{
+    width: 100%;
+    height: 200px;
+}
+.story-sliding ul li {
+    float: left;
+    width: 320px;
+    height: 200px;
+    position: relative;
+    margin-right: 20px;
+    transition: box-shadow .5s;
+    -moz-transition: box-shadow .5s;
+    -webkit-transition: box-shadow .5s;
+    -o-transition: box-shadow .5s;
+}
+.story-sliding ul li:hover .story-content{
+    -webkit-box-shadow: 0 1px 5px  #d9d9d9;
+    -moz-box-shadow: 0 1px 5px  #d9d9d9;
+    box-shadow: 0 1px 5px  #d9d9d9;
+}
+
+.story-sliding ul li:nth-child(3){
+    margin-right: 0;
+}
+.story-sliding ul li a {
+    display: block;
+    height: 100%;
+}
+.jk-story ul .story-content {
+    box-sizing: border-box;
+    width: 100%;
+    height: 121px;
+    border: 1px solid #e9e9e9;
+    background: #fff;
+    position: relative;
+}
+.jk-story ul .story-content {
+    width: 100%;
+    height: 121px;
+    border: 1px solid #e9e9e9;
+    background: #fff;
+    position: relative;
+}
+.jk-story ul .story-content:after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #fff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 47px;
+}
+.jk-story ul .story-content p {
+    height: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    color: #555;
+    line-height: 20px;
+    padding: 20px 25px;
+    text-align: left;
+}
+.jk-story ul .story-content p:before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 10px;
+    background: url(../images/content/storyicon_4a5e270.png) no-repeat center;
+    background-size: 14px 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.jk-story ul .story-content p:after {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 10px;
+    background: url(../images/content/storyicon_4a5e270.png) no-repeat center;
+    background-size: 14px 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+}
+.jk-story ul .story-info {
+    height: 80px;
+    padding-left: 95px;
+    padding-top: 28px;
+    position: relative;
+}
+.jk-story ul .story-info img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #e9e9e9;
+}
+.jk-story ul .story-info p {
+    font-size: 12px;
+    color: #555;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    text-align: left;
+}
+.jk-story ul .story-info span {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    color: #999;
+    font-size: 12px;
+    text-align: left;
+}
+.jk-story .story-container .click-dot{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+.jk-story .story-container .click-dot ul li{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+    background: #999;
+    cursor: pointer;
+}
+.story-container .click-dot ul li.on{
+    width: 16px;
+    background: #35b558;
+}
+/*第六项合作企业*/
+.jk-partner{
+    width: 1000px;
+    margin: 0 auto;
+    height: 240px;
+    margin-bottom: 40px;
+}
+.jk-partner h2 {
+    font-size: 18px;
+    color: #555;
+    line-height: 18px;
+    height: 18px;
+    margin-bottom: 22px;
+}
+.jk-partner ul {
+    width: 100%;
+    height: 120px;
+}
+.jk-partner ul li {
+    box-sizing: border-box;
+    float: left;
+    width: 150px;
+    height: 50px;
+    border: 1px solid #e9e9e9;
+    background: #fff;
+    margin-right: 20px;
+    transition: box-shadow .8s;
+    -moz-transition: box-shadow .8s;
+    -webkit-transition: box-shadow .8s;
+    -o-transition: box-shadow .8s;
+}
+.jk-partner ul li:hover{
+    -webkit-box-shadow: 0  1px 5px #d1d1d1;
+    -moz-box-shadow: 0 1px 5px #d1d1d1;
+    box-shadow: 0 1px 5px #d1d1d1;
+}
+.jk-partner ul li:nth-child(6),
+.jk-partner ul li:nth-child(12){
+    margin-right: 0;
+}
+.jk-partner ul li:nth-child(n+7) {
+    margin-top: 10px;
+}
+.jk-partner ul li a {
+    display: block;
+    height: 100%;
+}
+.jk-partner ul li:nth-child(1) a{
+    background: url(../images/content/p_microsoft_82f9a9a.png) no-repeat center;
+}
+.jk-partner ul li:nth-child(2) a{
+    background: url(../images/content/p_tencent_47175aa.png) no-repeat center;
+}
+.jk-partner ul li:nth-child(3) a{
+    background: url(../images/content/p_qcloud_ab76cc7.png) no-repeat center;
+}
+.jk-partner ul li:nth-child(4) a{
+    background: url(../images/content/p_qualcomm_362a472.png) no-repeat center;
+}
+.jk-partner ul li:nth-child(5) a{
+    background: url(../images/content/p_bootstrap_d0a74f3.png) no-repeat center;
+}
+.jk-partner ul li:nth-child(6) a{
+    background: url(../images/content/p_amd_f9f0c7f.png) no-repeat center;
+}
+.jk-partner ul li:nth-child(7) a{
+    background: url(../images/content/p_cocos_2a0a8f3.png) no-repeat center;
+}
+.jk-partner ul li:nth-child(8) a{
+    background: url(../images/content/p_xunfei_d1cd670.png) no-repeat center;
+}
+.jk-partner ul li:nth-child(9) a{
+    background: url(../images/content/p_tingyun_c2752df.png) no-repeat center;
+}
+.jk-partner ul li:nth-child(10) a{
+    background: url(../images/content/p_tuling_3ec6ea2.png) no-repeat center;
+}
+.jk-partner ul li:nth-child(11) a{
+    background: url(../images/content/p_cloudstack_6ecabb3.png) no-repeat center;
+}
+.jk-partner ul li:nth-child(12) a{
+    background: url(../images/content/p_juhe_25bbedf.png) no-repeat center;
+}
+.jk-partner .more-partner {
+    display: inline-block;
+    margin-top: 38px;
+    height: 32px;
+    line-height: 30px;
+    border: 1px solid #35b558;
+    border-radius: 2px;
+    width: 120px;
+    font-size: 14px;
+    color: #35b558;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    margin-left: -60px;
+    transition: background .8s;
+    -moz-transition: background .8s;
+    -webkit-transition: background .8s;
+    -o-transition: background .8s;
+}
+.jk-partner .more-partner:hover{
+    background: #35b558;
+    color: #fff;
+}
+/*中间部分-end*/
+/*底部部分-start*/
+footer{
+    min-width: 1000px;
+    border-top: 1px solid #e4e4e4;
+    background-color: #fff;
+}
+footer .jkinfor-block .jkinfor {
+    position: relative;
+    width: 1000px;
+    height: 215px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f5f5f5;
+    padding-left: 224px;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+footer .jkinfor-block .jkinfor .jk-logo {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    display: inline-block;
+    width: 160px;
+}
+footer .jkinfor-block .jkinfor .jk-logo img {
+    width: 109px;
+    height: 40px;
+    display: block;
+}
+footer .jkinfor-block .jkinfor .jk-logo p {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+}
+footer .jkinfor dl {
+    width: 135px;
+    color: #808080;
+    float: left;
+}
+footer .jkinfor dl dt {
+    font-size: 14px;
+    line-height: 30px;
+}
+footer .jkinfor dl dd {
+    font-size: 12px;
+    line-height: 30px;
+}
+footer .jkinfor dl dd a {
+    color: #999999;
+}
+footer .jkinfor dl dd a:hover{
+    color: #35B558;
+}
+footer .jk-down {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    display: inline-block;
+    width: 175px;
+    text-align: left;
+}
+footer .jk-down .hot-tel {
+    color: #808080;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+footer .jk-down .downCon {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #eeeeee;
+    margin-bottom: 10px;
+    color: #808080;
+    font-size: 13px;
+    padding-left: 40px;
+    cursor: pointer;
+}
+footer .jk-down .down-ios {
+    background: url(../images/icon-down-ios.png)no-repeat 0 0;
+    background-size: 30px 30px;
+}
+footer .jk-down .down-and {
+    background: url(../images/icon-down-and.png)no-repeat 0 0;
+    background-size: 30px 30px;
+}
+footer .jk-down .downCon img {
+    width: 115px;
+    height: 153px;
+    position: absolute;
+    top: -157px;
+    left: 12px;
+    z-index: 2;
+    display: none;
+}
+footer .jk-down .downCon:hover img{
+    display: inline-block;
+}
+footer .copyright{
+    font-size: 12px;
+    color: #999;
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+    padding: 15px 0;
+}
+footer .copyright a{
+    color: #999;
+}
+footer .copyright a:hover {
+    color: #35B558;
+}
+footer .copyright a[class^="down"] {
+    float: right;
+    height: 15px;
+    width: 20px;
+}
+#footer .copyright a.down-wechat {
+    background: url(../images/icon-down-wechat.png)no-repeat 0 0;
+    background-size: 18px 15px;
+}
+#footer .copyright a.down-sina {
+    background: url(../images/icon-down-sina.png)no-repeat 0 0;
+    background-size: 18px 15px;
+}
+
+/*底部部分-end*/
+/*ie兼容部分css3*/
+/*behavior:url(ie-css3.htc);*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

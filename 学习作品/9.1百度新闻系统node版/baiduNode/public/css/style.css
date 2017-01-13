@@ -1,0 +1,143 @@
+/* reset */
+.cf::before,
+.cf::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+html{
+	font-size: 62.5%;
+	font-family: arial;
+	height: 100%;
+}
+body{
+	height: 100%;
+}
+.container{
+	width: 100%
+	height:100%;
+}
+a {
+	text-decoration: none;
+}
+/* reset end */
+
+/*顶部*/
+header{
+	background:#4182f1 url(../img/bg-news-logo_344ce44.png) no-repeat center center;
+	background-size: 65px;
+	border-bottom: 1px solid #5898f0;
+}
+
+header a{
+	display: block;
+	height: 4rem;
+	line-height: 4rem;
+	color: #fff;
+	margin: 0 1rem;
+}
+header a:nth-child(1),
+header a:nth-child(2){
+	float: left;
+}
+header a:nth-child(3),
+header a:nth-child(4){
+	float: right;
+}
+header a .iconfont{
+	font-size: 2.2rem;
+}
+/* 导航条 */
+nav{
+	background-color: #4182f1;
+}
+nav ul{
+	margin: 0;
+	padding: 0;
+	padding-bottom: 2px;
+	list-style: none;
+	font-size: 0;
+}
+
+nav ul li {
+	display: inline-block;
+	/*width: 16.66%;*/
+	font-size: 1.44rem;
+	text-align: center;
+}
+nav a {
+	display: inline-block;
+	padding: 0.9rem 0;
+	color:#fff;
+	margin: -2px 0 2px 0;
+}
+nav ul i{
+	display: inline-block;
+	height: 1rem;
+	float: right;
+	border-right: 1px solid #5898f0;
+	position: relative;
+	top: 1rem;
+}
+nav li>a.action{
+	border-bottom: 2px solid #fff;
+	margin-bottom: 0;
+}
+/*新闻内容*/
+.news-lists{
+	margin: 1rem 0 0 ;
+	padding: 0 1.3rem;
+	list-style: none;
+}
+.news-lists h1{
+	font-size: 1.3rem;
+}
+.news-list{
+	display: flex;
+	border-bottom: 1px solid #e6e6e6;
+	margin-top: 1rem;
+}
+.newsimg{
+	flex: 1;
+}
+.newscontent{
+	flex: 2;
+	padding: 0 0.8rem;
+}
+.newsimg img{
+	width: 100%;
+	height: atuo;
+}
+.newscontent span{
+	display: inline-block;
+	vertical-align: top;
+}
+.newscontent span.newstime{
+	color: #999;
+}
+.newscontent span.newssrc{
+	margin-left: 0.8rem;
+	border:1px solid #efb9b9;
+	border-radius: 2px;
+	color: #ff0000;
+	font-weight: 400;
+	padding: 0 1px;
+	max-width: 100px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+/* 加载动画 */
+.loading-img{
+	width: 100%;
+	padding-top: 5rem;
+	text-align: center;
+}
+.loading-img img{
+	width: 80px;
+}
+
+
+
+
+

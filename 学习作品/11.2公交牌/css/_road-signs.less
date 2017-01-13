@@ -1,0 +1,141 @@
+/*setting*/
+@green: #006401;
+@red: #cd2f00;
+@transparent: rgba(0,0,0,0);
+//@white: #fff;
+
+.fl(){
+  float: left;
+}
+.fr(){
+  float: right;
+}
+.box-sizing(){
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*reset*/
+.cf::before,
+.cf::after{
+  content: '';
+  height: 0;
+  clear: both;
+  zoom: 1;
+  opacity: 0;
+}
+body{
+  background-color: #e0e0e0;
+}
+.container{
+  font-family: Arial;
+  font-size: 14px;
+  color: #555;
+}
+/*style*/
+.container{
+  margin: 100px auto;
+}
+.road-signs{
+  width: 750px;
+  height: 450px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #fff;
+  .bus-id{
+    .fl;
+    overflow: hidden;
+    .bus-name{
+      @name-width: 750px*4/10;
+      @name-height: 450px*3/10;
+      display: block;
+      width: @name-width;
+      height: @name-height;
+      line-height: @name-height;
+      font-size: @name-height*8/10;
+      color: #fff;
+      background-color: @red;
+      text-align: center;
+    }
+    .work-time{
+      line-height: 50px;
+      font-size: 50px*4/10;
+      font-weight: bold;
+      word-spacing:1px;
+      letter-spacing: 1px;
+    }
+  }
+  .station-inf{
+    .fl;
+    margin-left: 35px;
+    width: 750px/2;
+    height: 450px*4/10;
+    text-align: center;
+    font-size: 25px;
+    color: @green;
+    h2{
+      &.now-station{
+        font-size: 27px;
+        color: @red;
+      }
+    }
+    p{
+      margin: 40px 0;
+      font-size: 18px;
+    }
+  }
+  .station-list{
+    clear: both;
+    width: 100%;
+    height: 450px*4.5/10;
+    background-color: @green;
+    ul{
+      .box-sizing;
+      padding: 10px 3px;
+      width: 100%;
+      overflow: hidden;
+      li{
+        .fl;
+        .box-sizing;
+        color: #fff;
+        width: 100%/24px;
+        padding: 6px;
+        line-height: 22px;
+        text-align: center;
+        span{
+          text-align: center;
+        }
+      }
+    }
+  }
+  .cost-des{
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+    .cost-inf{
+      font-weight: bold;
+    }
+  }
+  .direction-arrow{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    .dec-list{
+      display: inline-block;
+      width: 75%;
+      height: 12px;
+      background-color: @red;
+    }
+    .dec-arrow{
+      display: inline-block;
+      position: absolute;
+      top: -6px;
+      border-color:@transparent;
+      border-top: 0;
+      border-left: 0;
+      border-right: 50px solid @transparent ;
+      border-bottom: 18px solid @red;
+    }
+  }
+}
+

@@ -1,0 +1,88 @@
+/*变量*/
+@jk-green: #35b558;
+/*类*/
+.rotate(@deg){
+    transform: rotate(@deg);
+    -webkit-transform: rotate(@deg);
+    -moz-transform: rotate(@deg);
+    -ms-transform: rotate(@deg);
+}
+.backgroundImage(@url,@repeat: no-repeat,@position:center,@size:auto){
+    background: url(@url)  @repeat @position;
+    background-size: @size;
+}
+
+/* 箭头动画 */
+header nav li:hover i.arrow-icon{
+    margin-bottom: -2px;
+    border-color: @jk-green;
+    .rotate(45deg);
+    animation: rotate 1s ease normal;
+    -moz-animation: rotate 1s ease normal;
+    -webkit-animation: rotate 1s ease normal;
+}
+@keyframes rotate
+{
+    from{
+        .rotate(-135deg);
+    }
+    to{
+        .rotate(45deg);
+    }
+
+}
+/*header hover鼠标悬停*/
+.showBlock{
+    display: block;
+    opacity: 1;
+}
+header{
+    a:hover{
+        color: @jk-green;
+        cursor: pointer;
+    }
+    nav{
+        li{
+            &:hover{
+                color: @jk-green;
+                cursor: pointer;
+            }
+            a:hover{
+                background: #f5f5f5;
+                color: @jk-green;
+            }
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4){
+                &:hover .submenu{
+                    .showBlock;
+                }
+            }  
+        }
+    }
+    .loginlist{
+        dd:hover{
+            background: #f5f5f5;
+            color: @jk-green;
+            a{
+                color: @jk-green;
+            }
+        }
+    }
+    .icon-box{
+        .app-icon:hover{
+            .backgroundImage('../images/app-icon2.png',no-repeat,center,17px 17px);
+        }
+        .search-icon:hover {
+            .backgroundImage('../images/search-icon2.png',no-repeat,center,17px 17px);
+        }
+        span{
+            &:nth-child(2),
+            &:nth-child(3){
+                &:hover .submenu{
+                    .showBlock;
+                }
+            }
+        }
+    }
+}

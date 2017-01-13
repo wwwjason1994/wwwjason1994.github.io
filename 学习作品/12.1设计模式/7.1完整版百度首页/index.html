@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <!-- 百度icon -->
+    <title>百度一下，你就知道</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="fonts/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="only screen and (min-width:771px)"/>
+    <link rel="stylesheet" type="text/css" href="css/style-xs.css" media="only screen and (max-width:770px)"/>
+    <!--[if IE]>
+    <script type="text/javascript" src="javascript/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="wrapper">
+    <!--背景图-->
+    <div class="background_skin">
+        <!--把背景图设置到body里面解决ie兼容-->
+    </div>
+    <!-- 顶部导航 -->
+    <header>
+        <div class="head_right">
+            <div class="weather_wrapper">
+                <a href="" class="weather_container">
+                    <span class="weather_city">广州：</span>
+                    <div class="icon-weather"></div>
+                    <span class="weather_temp">24℃</span>
+                    <span class="polution_name">良</span>
+                    <span class="polution_num">65</span>
+                    <span class="icon-outline">|</span>
+                </a>
+            </div>
+            <div class="func_wrapper">
+                <a href="" class="funcs">
+                    <span class="funcs_1">宝箱</span>
+                </a>
+                <a href="javascript:;" class="funcs" id="btn-skin">
+                    <span class="funcs_2">换肤</span>
+                </a>
+                <a href="" class="funcs">
+                    <span class="funcs_3">消息</span>
+                </a>
+            </div>
+        </div>
+        <nav>
+            <a href="http://www.nuomi.com/?cid=002540">糯米</a>
+            <a href="http://news.baidu.com">新闻</a>
+            <a href="http://www.hao123.com">hao123</a>
+            <a href="http://map.baidu.com">地图</a>
+            <a href="http://v.baidu.com">视频</a>
+            <a href="http://tieba.baidu.com">贴吧</a>
+            <a href="https://passport.baidu.com/v2/?login&amp;tpl=mn&amp;u=http%3A%2F%2Fwww.baidu.com%2F">登录</a>
+            <a href="http://www.baidu.com/gaoji/preferences.html">设置</a>
+            <a href="http://www.baidu.com/more/" class="more" id="nav_move">
+                更多产品
+            </a>
+            <!--侧边栏-->
+            <div class="side_bar">
+                <div class="side_content">
+                    <div class="sidebar_title">更多产品</div>
+                    <div class="sidebar_wrapper">
+                        <a href="http://music.baidu.com" name="tj_mp3">
+                            <span class="img_item_3"></span>
+                            音乐
+                        </a>
+                        <a href="http://image.baidu.com" name="tj_img">
+                            <span class="img_item_4"></span>
+                            图片
+                        </a>
+                        <a href="http://zhidao.baidu.com" name="tj_zhidao">
+                            <span class="img_item_2"></span>
+                            知道
+                        </a>
+                        <a href="http://wenku.baidu.com" name="tj_wenku">
+                            <span class="img_item_5"></span>
+                            文库
+                        </a>
+                        <a href="http://top.baidu.com" name="tj_bang">
+                            <span class="img_item_6"></span>
+                            风云榜
+                        </a>
+                        <div class="baidu_more">
+                            <a href="http://www.baidu.com/more/" class="">全部产品&gt;&gt;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="xs-header">
+            <div class="weather-outline">
+                <div class="icon-sun"></div>
+                <div class="weather-num">20°</div>
+                <div class="weather-status">
+                    <p>广州</p>
+                    <p>空气&nbsp;46</p>
+                </div>
+            </div>
+            <div class="admin_login">
+                <a href="https://m.baidu.com/usrprofile"></a>
+            </div>
+        </div>
+    </header>
+    <!-- 页面内容 -->
+    <div class="content">
+        <div class="content_head cf">
+            <div class="head_container">
+                <div class="logoAndSch">
+                    <div class="logo_img">
+                        <img src="img/bd_logo1.png" alt="百度logo" class="logo_normal"/>
+                        <img src="img/logo_white_fe6da1ec.png" alt="百度logo" class="logo_have_theme"/>
+                        <img class="xs-logo" src="img/plus_logo.png"  alt="百度logo" />
+                    </div>
+                    <form action="http://www.baidu.com/s" method="get" target="_blank" autocomplete="off">
+                        <div class="search_bar">
+                            <div class="text_bar">
+                                <label for="text_s"></label>
+                                <input id="text_s" class="text_s" type="text" name="wd"/>
+                                <span class="camera_icon"></span>
+                            </div>
+                            <button class="btnS" type="submit">百度一下</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="s_wrap" class="s_isindex_wrap">
+            <div id="s_main" class="s_main">
+                <div class="main_content">
+                    <div class="s_menu_container cf">
+                        <div class="menu_bar">
+                            <div class="menus_outer">
+                                <span class="menu_mine menu_item">
+                                    <div class="icon-mine"></div>
+                                    <div class="text-mine">我的关注</div>
+                                </span>
+                                <span class="menu_item menu_action">推荐</span>
+                                <span class="menu_item">导航</span>
+                                <span class="menu_item">视频</span>
+                                <span class="menu_item">购物</span>
+                            </div>
+                            <div class="s-bg-space"></div>
+                            <span id="s_menu_set" class="s-menu-setting s-opacity-white-background" title="设置">
+                                <div class="menu-icon"></div>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="content_tap">
+                        <div id="content_mine" class="tap_item cf">
+                            <div class="my_nav">
+                                <div class="nav_title_bar">
+                                    <div class="my_nav nav_title">
+                                        <a href="javascript:;">
+                                            <div class="title-icon">
+                                                <span class="icon-down"></span>
+                                            </div>
+                                            <span class="title_text">我是导航</span>
+                                            <span class="title_num">(5)</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="my_navlite">
+                                    <ul>
+                                        <li class="my_nav_li">
+                                            <a href="#">
+                                                <img src="img/6000.png" height="16" width="16" class="nav-icon">
+                                                <span class="nav_text">工商银行</span>
+                                            </a>
+                                        </li>
+                                        <li class="my_nav_li">
+                                            <a href="#">
+                                                <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                                <span class="nav_text">优酷视频</span>
+                                            </a>
+                                        </li>
+                                        <li class="my_nav_li">
+                                            <a href="#">
+                                                <img src="img/6000.png" height="16" width="16" class="nav-icon">
+                                                <span class="nav_text">土豆视频</span>
+                                            </a>
+                                        </li>
+                                        <li class="my_nav_li">
+                                            <a href="#">
+                                                <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                                <span class="nav_text">Facebook</span>
+                                            </a>
+                                        </li>
+                                        <li class="my_nav_li">
+                                            <a href="#">
+                                                <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                                <span>YouTube</span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="content_rec" class="tap_item cf tap_action" >
+                            <div class="rec_content">
+                                <div class="rec_title">
+                                    <div class="title_line_1"></div>
+                                    <div class="taps_content">
+                                        <div class="taps-icon"></div>
+                                        <span>以下信息根据您的兴趣推荐</span>
+                                    </div>
+                                    <div class="title_line_2"></div>
+                                </div>
+                            </div>
+                            <div class="news_list">
+                                <div class="new_item">
+                                    <a href="#">
+                                        <div class="text_content">
+                                            <h2>今年条纹短袜真是流行疯了</h2>
+                                        </div>
+                                        <div class="pic_content">
+                                            <div class="img_wrap">
+                                                <img src="img/u=796738226,1291717954&fm=170&s=450844BB02C41CFDD1004DEF0300B002&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                            <div class="img_wrap">
+                                                <img src="img/u=974913271,2124148165&fm=170&s=EB10598904E60CBE691550CA0300A090&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                            <div class="img_wrap">
+                                                <img src="img/u=1435622622,2173328706&fm=170&s=4B00418C46A872BDD1101CDE0300D0B1&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="news_from">
+                                            <span class="src-net">互联网</span>
+                                            <span class="src-time">20:36</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="new_item">
+                                    <a href="#">
+                                        <div class="text_content">
+                                            <h2>更具动感 全新宝马5系M Performance官图</h2>
+                                        </div>
+                                        <div class="pic_content">
+                                            <div class="img_wrap">
+                                                <img src="img/u=4267505366,3700612558&fm=170&s=65D0EA2087AB0EAC74AD251B0100C091&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                            <div class="img_wrap">
+                                                <img src="img/u=26466188,3764708108&fm=170&s=EDD2CE04578824EC76A5D11F0100C093&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                            <div class="img_wrap">
+                                                <img src="img/u=4213577356,3642548116&fm=170&s=ADD2EA008FFB218E3816950B01008092&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="news_from">
+                                            <span class="src-net">搜狐汽车</span>
+                                            <span class="src-time">03:36</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="new_item">
+                                    <a href="#">
+                                        <div class="text_content">
+                                            <h2>今年条纹短袜真是流行疯了</h2>
+                                        </div>
+                                        <div class="pic_content">
+                                            <div class="img_wrap">
+                                                <img src="img/u=796738226,1291717954&fm=170&s=450844BB02C41CFDD1004DEF0300B002&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                            <div class="img_wrap">
+                                                <img src="img/u=974913271,2124148165&fm=170&s=EB10598904E60CBE691550CA0300A090&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                            <div class="img_wrap">
+                                                <img src="img/u=1435622622,2173328706&fm=170&s=4B00418C46A872BDD1101CDE0300D0B1&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="news_from">
+                                            <span class="src-net">互联网</span>
+                                            <span class="src-time">20:36</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="new_item">
+                                    <a href="#">
+                                        <div class="text_content">
+                                            <h2>更具动感 全新宝马5系M Performance官图</h2>
+                                        </div>
+                                        <div class="pic_content">
+                                            <div class="img_wrap">
+                                                <img src="img/u=4267505366,3700612558&fm=170&s=65D0EA2087AB0EAC74AD251B0100C091&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                            <div class="img_wrap">
+                                                <img src="img/u=26466188,3764708108&fm=170&s=EDD2CE04578824EC76A5D11F0100C093&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                            <div class="img_wrap">
+                                                <img src="img/u=4213577356,3642548116&fm=170&s=ADD2EA008FFB218E3816950B01008092&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="news_from">
+                                            <span class="src-net">搜狐汽车</span>
+                                            <span class="src-time">03:36</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="new_item">
+                                    <a href="#">
+                                        <div class="text_content">
+                                            <h2>今年条纹短袜真是流行疯了</h2>
+                                        </div>
+                                        <div class="pic_content">
+                                            <div class="img_wrap">
+                                                <img src="img/u=796738226,1291717954&fm=170&s=450844BB02C41CFDD1004DEF0300B002&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                            <div class="img_wrap">
+                                                <img src="img/u=974913271,2124148165&fm=170&s=EB10598904E60CBE691550CA0300A090&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                            <div class="img_wrap">
+                                                <img src="img/u=1435622622,2173328706&fm=170&s=4B00418C46A872BDD1101CDE0300D0B1&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="news_from">
+                                            <span class="src-net">互联网</span>
+                                            <span class="src-time">20:36</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="new_item">
+                                    <a href="#">
+                                        <div class="text_content">
+                                            <h2>更具动感 全新宝马5系M Performance官图</h2>
+                                        </div>
+                                        <div class="pic_content">
+                                            <div class="img_wrap">
+                                                <img src="img/u=4267505366,3700612558&fm=170&s=65D0EA2087AB0EAC74AD251B0100C091&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                            <div class="img_wrap">
+                                                <img src="img/u=26466188,3764708108&fm=170&s=EDD2CE04578824EC76A5D11F0100C093&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                            <div class="img_wrap">
+                                                <img src="img/u=4213577356,3642548116&fm=170&s=ADD2EA008FFB218E3816950B01008092&w=218&h=146&img.JPEG" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="news_from">
+                                            <span class="src-net">搜狐汽车</span>
+                                            <span class="src-time">03:36</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="hot_news">
+                                <div class="hotnews_container">
+                                    <div class="hotnews_title cf">
+                                        <div class="hn_title">实时热点</div>
+                                        <div class="hn_change">
+                                            <a href="">
+                                                <div class="icon-change"></div>
+                                                <span>换一换</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="hotnews_content">
+                                        <div class="new_item">
+                                            <a href="#" class="new_link">
+                                                <span>河北保定小区爆炸</span>
+                                                <div class="icon_news"></div>
+                                            </a>
+                                        </div>
+                                        <div class="new_item">
+                                            <a href="#" class="new_link">
+                                                <span>河北保定小区爆炸</span>
+                                                <div class="icon_news"></div>
+                                            </a>
+                                        </div>
+                                        <div class="new_item">
+                                            <a href="#" class="new_link">
+                                                <span>河北保定小区爆炸</span>
+                                                <div class="icon_news"></div>
+                                            </a>
+                                        </div>
+                                        <div class="new_item">
+                                            <a href="#" class="new_link">
+                                                <span>河北保定小区爆炸</span>
+                                                <div class="icon_news"></div>
+                                            </a>
+                                        </div>
+                                        <div class="new_item">
+                                            <a href="#" class="new_link">
+                                                <span>河北保定小区爆炸</span>
+                                                <div class="icon_news"></div>
+                                            </a>
+                                        </div>
+                                        <div class="new_item">
+                                            <a href="#" class="new_link">
+                                                <span>游客食物砸醒熊猫</span>
+                                            </a>
+                                        </div>
+                                        <div class="new_item">
+                                            <a href="#" class="new_link">
+                                                <span>游客食物砸醒熊猫</span>
+                                            </a>
+                                        </div>
+                                        <div class="new_item">
+                                            <a href="#" class="new_link">
+                                                <span>游客食物砸醒熊猫</span>
+                                            </a>
+                                        </div>
+                                        <div class="new_item">
+                                            <a href="#" class="new_link">
+                                                <span>游客食物砸醒熊猫</span>
+                                            </a>
+                                        </div>
+                                        <div class="new_item">
+                                            <a href="#" class="new_link">
+                                                <span>游客食物砸醒熊猫</span>
+                                            </a>
+                                        </div>
+                                        <div class="new_item">
+                                            <a href="#" class="new_link">
+                                                <span>游客食物砸醒熊猫</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="content_nav" class="tap_item cf">
+                            <div class="nav_wrap">
+                                <div class="guess_title">
+                                    <span>猜你喜欢</span>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>百度糯米</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>京东商城</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>一号店</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>苏宁易购</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>百度糯米</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>京东商城</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>一号店</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>苏宁易购</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>百度糯米</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>京东商城</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>一号店</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>苏宁易购</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>百度糯米</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>京东商城</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>一号店</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>苏宁易购</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>百度糯米</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>京东商城</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>一号店</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>苏宁易购</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>百度糯米</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>京东商城</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>一号店</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                                <div class="link_item">
+                                    <a href="">
+                                        <img src="img/6000.png"  height="16" width="16" class="nav-icon">
+                                        <span>苏宁易购</span>
+                                    </a>
+                                    <div class="item_border"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="content_view" class="tap_item cf">
+                            <div class="view_container">
+                                <div class="view_term">
+                                    <div class="view_item">
+                                        <a class="view_img" href="#" >
+                                            <img src="img/u=869822508,2037781299&fm=58.jpg" alt="妖精的尾巴">
+                                        </a>
+                                        <div class="view_des">
+                                            <div class="view_title">
+                                                <span>妖精的尾巴</span>
+                                                <div class="score">
+                                                    <span class="score-star">
+                                                        <span class="star-active" style="width:53.3px"></span></span>8.2
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="view_item">
+                                        <a class="view_img" href="#" >
+                                            <img src="img/u=869822508,2037781299&fm=58.jpg" alt="妖精的尾巴">
+                                        </a>
+                                        <div class="view_des">
+                                            <div class="view_title">
+                                                <span>妖精的尾巴</span>
+                                                <div class="score">
+                                                    <span class="score-star">
+                                                        <span class="star-active" style="width:53.3px"></span></span>8.2
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="view_item">
+                                        <a class="view_img sm_img" href="#" >
+                                            <img src="img/u=2646512082,3799729679&fm=58.jpg" alt="爱奇艺早班机：赵丽颖入职爱奇艺 成陈伟霆同事">
+                                        </a>
+                                        <div class="view_des">
+                                            <div class="view_title">
+                                                <span>爱奇艺早班机：赵丽颖入职爱奇艺 成陈伟霆同事</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="view_item">
+                                        <a class="view_img sm_img" href="#" >
+                                            <img src="img/u=2646512082,3799729679&fm=58.jpg" alt="爱奇艺早班机：赵丽颖入职爱奇艺 成陈伟霆同事">
+                                        </a>
+                                        <div class="view_des">
+                                            <div class="view_title">
+                                                <span>爱奇艺早班机：赵丽颖入职爱奇艺 成陈伟霆同事</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="view_item">
+                                        <a class="view_img sm_img" href="#" >
+                                            <img src="img/u=2646512082,3799729679&fm=58.jpg" alt="爱奇艺早班机：赵丽颖入职爱奇艺 成陈伟霆同事">
+                                        </a>
+                                        <div class="view_des">
+                                            <div class="view_title">
+                                                <span>爱奇艺早班机：赵丽颖入职爱奇艺 成陈伟霆同事</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="view_item">
+                                        <a class="view_img sm_img" href="#" >
+                                            <img src="img/u=2646512082,3799729679&fm=58.jpg" alt="爱奇艺早班机：赵丽颖入职爱奇艺 成陈伟霆同事">
+                                        </a>
+                                        <div class="view_des">
+                                            <div class="view_title">
+                                                <span>爱奇艺早班机：赵丽颖入职爱奇艺 成陈伟霆同事</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="content_shopping" class="tap_item cf">
+                            <div class="shop_container">
+                                <div class="shop_term cf">
+                                    <div class="shop_item">
+                                        <a class="shop_img" href="#" >
+                                            <img src="img/4a36acaf2edda3cc0947772408e93901213f9217.jpg">
+                                        </a>
+                                        <div class="mask top"><span class="bsTitle">百度VIP  省钱1212</span></div>
+                                        <div class="cover"></div>
+                                        <div class="cover right"></div>
+                                        <div class="mask">
+                                            <span class="bsTitle">全场嗨购</span><span class="percentdesc">一省到底</span>
+                                        </div>
+                                    </div>
+                                    <div class="shop_item">
+                                        <a class="shop_img" href="#" >
+                                            <img src="img/29381f30e924b8998488aa3c67061d950a7bf67a.jpg">
+                                        </a>
+                                        <div class="mask top"><span class="bsTitle">1212淘宝亲亲节</span></div>
+                                        <div class="cover"></div>
+                                        <div class="cover right"></div>
+                                        <div class="mask">
+                                            <span class="bsTitle">千万现金红包</span><span class="percentdesc">立即开抢</span>
+                                        </div>
+                                    </div>
+                                    <div class="shop_item">
+                                        <a class="shop_img" href="#" >
+                                            <img src="img/4a36acaf2edda3cc0947772408e93901213f9217.jpg">
+                                        </a>
+                                        <div class="mask top"><span class="bsTitle">百度VIP  省钱1212</span></div>
+                                        <div class="cover"></div>
+                                        <div class="cover right"></div>
+                                        <div class="mask">
+                                            <span class="bsTitle">全场嗨购</span><span class="percentdesc">一省到底</span>
+                                        </div>
+                                    </div>
+                                    <div class="shop_item">
+                                        <a class="shop_img" href="#" >
+                                            <img src="img/29381f30e924b8998488aa3c67061d950a7bf67a.jpg">
+                                        </a>
+                                        <div class="mask top"><span class="bsTitle">1212淘宝亲亲节</span></div>
+                                        <div class="cover"></div>
+                                        <div class="cover right"></div>
+                                        <div class="mask">
+                                            <span class="bsTitle">千万现金红包</span><span class="percentdesc">立即开抢</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="show_more">
+                    <div class="show_more_btn" style="visibility: visible;">
+                        <div class="more_text">滚动查看更多</div>
+                        <div class="rect"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swipe_container">
+            <div class="swipe_list">
+                <div class="swipe_item">
+                    <a href="#" class="ns_item">
+                        <i class="ns_focus ns_icon"></i>
+                        <span class="ns_text">关注</span>
+                    </a>
+                    <a href="#" class="ns_item">
+                        <i class="ns_news ns_icon"></i>
+                        <span class="ns_text">新闻</span>
+                    </a>
+                    <a href="#" class="ns_item">
+                        <i class="ns_novel ns_icon"></i>
+                        <span class="ns_text">小说</span>
+                    </a>
+                    <a href="#" class="ns_item">
+                        <i class="ns_view ns_icon"></i>
+                        <span class="ns_text">视频</span>
+                    </a>
+                    <a href="#" class="ns_item">
+                        <i class="ns_nuomi ns_icon"></i>
+                        <span class="ns_text">糯米</span>
+                    </a>
+                    <a href="#" class="ns_item">
+                        <i class="ns_map ns_icon"></i>
+                        <span class="ns_text">地图</span>
+                    </a>
+                </div>
+                <div class="swipe_item">
+                    <a href="#" class="ns_item">
+                        <i class="ns_tieba ns_icon"></i>
+                        <span class="ns_text">贴吧</span>
+                    </a>
+                    <a href="#" class="ns_item">
+                        <i class="ns_apps ns_icon"></i>
+                        <span class="ns_text">应用</span>
+                    </a>
+                    <a href="#" class="ns_item">
+                        <i class="ns_photo ns_icon"></i>
+                        <span class="ns_text">图片</span>
+                    </a>
+                    <a href="#" class="ns_item">
+                        <i class="ns_website ns_icon"></i>
+                        <span class="ns_text">网址</span>
+                    </a>
+                    <a href="#" class="ns_item">
+                        <i class="ns_extend ns_icon"></i>
+                        <span class="ns_text">推广</span>
+                    </a>
+                    <a href="#" class="ns_item">
+                        <i class="ns_music ns_icon"></i>
+                        <span class="ns_text">音乐</span>
+                    </a>
+                </div>
+            </div>
+            <ul class="ns-swipe-menu">
+                <li class="ns-swipe-tab ns-swipe-tab-active"></li>
+                <li class="ns-swipe-tab ns-swipe-tab-mr0"></li>
+            </ul>
+        </div>
+        <div class="news_list">
+            <div class="new_item">
+                <a href="#">
+                    <div class="text_content">
+                        <h2>今年条纹短袜真是流行疯了</h2>
+                    </div>
+                    <div class="pic_content">
+                        <div class="img_wrap">
+                            <img src="img/u=796738226,1291717954&fm=170&s=450844BB02C41CFDD1004DEF0300B002&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                        <div class="img_wrap">
+                            <img src="img/u=974913271,2124148165&fm=170&s=EB10598904E60CBE691550CA0300A090&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                        <div class="img_wrap">
+                            <img src="img/u=1435622622,2173328706&fm=170&s=4B00418C46A872BDD1101CDE0300D0B1&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                    </div>
+                    <div class="news_from">
+                        <span class="src-net">互联网</span>
+                        <span class="src-time">20:36</span>
+                    </div>
+                </a>
+            </div>
+            <div class="new_item">
+                <a href="#">
+                    <div class="text_content">
+                        <h2>更具动感 全新宝马5系M Performance官图</h2>
+                    </div>
+                    <div class="pic_content">
+                        <div class="img_wrap">
+                            <img src="img/u=4267505366,3700612558&fm=170&s=65D0EA2087AB0EAC74AD251B0100C091&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                        <div class="img_wrap">
+                            <img src="img/u=26466188,3764708108&fm=170&s=EDD2CE04578824EC76A5D11F0100C093&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                        <div class="img_wrap">
+                            <img src="img/u=4213577356,3642548116&fm=170&s=ADD2EA008FFB218E3816950B01008092&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                    </div>
+                    <div class="news_from">
+                        <span class="src-net">搜狐汽车</span>
+                        <span class="src-time">03:36</span>
+                    </div>
+                </a>
+            </div>
+            <div class="new_item">
+                <a href="#">
+                    <div class="text_content">
+                        <h2>今年条纹短袜真是流行疯了</h2>
+                    </div>
+                    <div class="pic_content">
+                        <div class="img_wrap">
+                            <img src="img/u=796738226,1291717954&fm=170&s=450844BB02C41CFDD1004DEF0300B002&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                        <div class="img_wrap">
+                            <img src="img/u=974913271,2124148165&fm=170&s=EB10598904E60CBE691550CA0300A090&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                        <div class="img_wrap">
+                            <img src="img/u=1435622622,2173328706&fm=170&s=4B00418C46A872BDD1101CDE0300D0B1&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                    </div>
+                    <div class="news_from">
+                        <span class="src-net">互联网</span>
+                        <span class="src-time">20:36</span>
+                    </div>
+                </a>
+            </div>
+            <div class="new_item">
+                <a href="#">
+                    <div class="text_content">
+                        <h2>更具动感 全新宝马5系M Performance官图</h2>
+                    </div>
+                    <div class="pic_content">
+                        <div class="img_wrap">
+                            <img src="img/u=4267505366,3700612558&fm=170&s=65D0EA2087AB0EAC74AD251B0100C091&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                        <div class="img_wrap">
+                            <img src="img/u=26466188,3764708108&fm=170&s=EDD2CE04578824EC76A5D11F0100C093&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                        <div class="img_wrap">
+                            <img src="img/u=4213577356,3642548116&fm=170&s=ADD2EA008FFB218E3816950B01008092&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                    </div>
+                    <div class="news_from">
+                        <span class="src-net">搜狐汽车</span>
+                        <span class="src-time">03:36</span>
+                    </div>
+                </a>
+            </div>
+            <div class="new_item">
+                <a href="#">
+                    <div class="text_content">
+                        <h2>今年条纹短袜真是流行疯了</h2>
+                    </div>
+                    <div class="pic_content">
+                        <div class="img_wrap">
+                            <img src="img/u=796738226,1291717954&fm=170&s=450844BB02C41CFDD1004DEF0300B002&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                        <div class="img_wrap">
+                            <img src="img/u=974913271,2124148165&fm=170&s=EB10598904E60CBE691550CA0300A090&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                        <div class="img_wrap">
+                            <img src="img/u=1435622622,2173328706&fm=170&s=4B00418C46A872BDD1101CDE0300D0B1&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                    </div>
+                    <div class="news_from">
+                        <span class="src-net">互联网</span>
+                        <span class="src-time">20:36</span>
+                    </div>
+                </a>
+            </div>
+            <div class="new_item">
+                <a href="#">
+                    <div class="text_content">
+                        <h2>更具动感 全新宝马5系M Performance官图</h2>
+                    </div>
+                    <div class="pic_content">
+                        <div class="img_wrap">
+                            <img src="img/u=4267505366,3700612558&fm=170&s=65D0EA2087AB0EAC74AD251B0100C091&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                        <div class="img_wrap">
+                            <img src="img/u=26466188,3764708108&fm=170&s=EDD2CE04578824EC76A5D11F0100C093&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                        <div class="img_wrap">
+                            <img src="img/u=4213577356,3642548116&fm=170&s=ADD2EA008FFB218E3816950B01008092&w=218&h=146&img.JPEG" alt="">
+                        </div>
+                    </div>
+                    <div class="news_from">
+                        <span class="src-net">搜狐汽车</span>
+                        <span class="src-time">03:36</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- 底部信息 -->
+        <footer>
+            <div class="ftcontent">
+                <div class="towd_code">
+                    <div class="code_zbios">
+                        <div class="img_zbios">
+                            <img src="img/zbios_efde696.png" alt="手机百度">
+                        </div>
+                        <div class="dec_zbios">
+                            <p><strong>手机百度</strong></p>
+                            <p>快人一步</p>
+                        </div>
+                    </div>
+                    <div class="code_nuomi">
+                        <div class="img_zbios">
+                            <img src="img/nuomi_365eabd.png" alt="百度糯米">
+                        </div>
+                        <div class="dec_zbios">
+                            <p><strong>百度糯米</strong></p>
+                            <p>一元大餐</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="baidu_dev">
+                    <p>
+                        <a href="https://www.baidu.com/cache/sethelp/help.html">把百度设为首页</a>
+                        &nbsp;&nbsp;
+                        <a href="http://home.baidu.com/">关于百度</a>
+                        &nbsp;&nbsp;
+                        <a href="http://ir.baidu.com/">About Baidu</a>
+                        &nbsp;&nbsp;
+                        <a href="http://e.baidu.com/?refer=888">百度推广</a>
+                    </p>
+                    <p>
+                        <span>©2016 Baidu </span>
+                        <a href="http://www.baidu.com/duty/">使用百度前必读</a>
+                        <a href="http://jianyi.baidu.com/">意见反馈</a>
+                        <span>京ICP证030173号</span>
+                    </p>
+                    <p>
+                        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001">
+                            <i class="beian_icon"></i>京公网安备11000002000001号
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--换肤面板-->
+    <div class="theme_container">
+        <div class="theme_wrap">
+            <div class="theme_block">
+                <div class="theme_nav">
+                    <div class="theme_nav_content cf">
+                        <div class="theme_nav_left cf">
+                            <div class="list_item theme_list">
+                                <span>热门</span>
+                            </div>
+                            <div class="list_item theme_list action">
+                                <span>游戏</span>
+                            </div>
+                            <div class="list_item theme_list">
+                                <span>卡特</span>
+                            </div>
+                            <div class="list_item theme_list">
+                                <span>女神降临</span>
+                            </div>
+                            <div class="list_item theme_list">
+                                <span>明星</span>
+                            </div>
+                            <div class="list_item theme_list">
+                                <span>风景</span>
+                            </div>
+                            <div class="list_item theme_list">
+                                <span>简约</span>
+                            </div>
+                            <div class="list_item theme_list">
+                                <span>小清新</span>
+                            </div>
+                            <div class="list_outline">
+                                <span class="line_style"></span>
+                            </div>
+                            <div class="list_item theme_setting">
+                                <span>自定义</span>
+                            </div>
+                            <div class="list_item theme_setting">
+                                <span>最近使用</span>
+                            </div>
+                        </div>
+                        <div class="theme_nav_middle">
+                            <div class="bg_setting">
+                                <span class="bg_default">不使用换肤</span>
+                            </div>
+                        </div>
+                        <div class="theme_nav_right">
+                            <div class="icon-up"></div>
+                            <span class="get_up">收起</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="theme_content cf">
+                    <div class="picture_wrap">
+                        <div class="picture_item">
+                            <ul>
+                                <li class="img-item pos_0 big_img" data-img="721%20(1).jpg">
+                                    <img src="img/theme/721.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_1" data-img="721%20(1).jpg">
+                                    <img src="img/theme/721.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_2" data-img="721%20(1).jpg">
+                                    <img src="img/theme/721.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_3" data-img="721%20(1).jpg">
+                                    <img src="img/theme/721.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_4" data-img="721%20(1).jpg">
+                                    <img src="img/theme/721.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_5" data-img="721%20(1).jpg">
+                                    <img src="img/theme/721.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_6" data-img="721%20(1).jpg">
+                                    <img src="img/theme/721.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_7" data-img="721%20(1).jpg">
+                                    <img src="img/theme/721.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_8 big_img" data-img="721%20(1).jpg">
+                                    <img src="img/theme/721.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_9" data-img="721%20(1).jpg">
+                                    <img src="img/theme/721.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_10" data-img="721%20(1).jpg">
+                                    <img src="img/theme/721.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_11" data-img="721%20(1).jpg">
+                                    <img src="img/theme/721.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="picture_item action">
+                            <ul>
+                                <li class="img-item pos_0 big_img" data-img="721%20(1).jpg">
+                                    <img src="img/theme/721.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_1" data-img="722%20(1).jpg">
+                                    <img src="img/theme/722.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_2" data-img="723%20(1).jpg">
+                                    <img src="img/theme/723.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_3" data-img="724%20(1).jpg">
+                                    <img src="img/theme/724.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_4" data-img="725%20(1).jpg">
+                                    <img src="img/theme/725.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_5" data-img="726%20(1).jpg">
+                                    <img src="img/theme/726.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_6" data-img="727%20(1).jpg">
+                                    <img src="img/theme/727.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_7" data-img="728%20(1).jpg">
+                                    <img src="img/theme/728.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_8 big_img" data-img="729%20(1).jpg">
+                                    <img src="img/theme/729.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_9" data-img="730%20(1).jpg">
+                                    <img src="img/theme/730.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_10" data-img="731%20(1).jpg">
+                                    <img src="img/theme/731.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_11" data-img="732%20(1).jpg">
+                                    <img src="img/theme/732.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="picture_item">
+                            <ul>
+                                <li class="img-item pos_0  big_img" data-img="722%20(1).jpg">
+                                    <img src="img/theme/722.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_1" data-img="722%20(1).jpg">
+                                    <img src="img/theme/722.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_2" data-img="722%20(1).jpg">
+                                    <img src="img/theme/722.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_3" data-img="722%20(1).jpg">
+                                    <img src="img/theme/722.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_4" data-img="722%20(1).jpg">
+                                    <img src="img/theme/722.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_5" data-img="722%20(1).jpg">
+                                    <img src="img/theme/722.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_6" data-img="722%20(1).jpg">
+                                    <img src="img/theme/722.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_7" data-img="722%20(1).jpg">
+                                    <img src="img/theme/722.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_8 big_img" data-img="722%20(1).jpg">
+                                    <img src="img/theme/722.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_9" data-img="722%20(1).jpg">
+                                    <img src="img/theme/722.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_10" data-img="722%20(1).jpg">
+                                    <img src="img/theme/722.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_11" data-img="722%20(1).jpg">
+                                    <img src="img/theme/722.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="picture_item">
+                            <ul>
+                                <li class="img-item pos_0 big_img" data-img="723%20(1).jpg">
+                                    <img src="img/theme/723.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_1" data-img="723%20(1).jpg">
+                                    <img src="img/theme/723.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_2" data-img="723%20(1).jpg">
+                                    <img src="img/theme/723.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_3" data-img="723%20(1).jpg">
+                                    <img src="img/theme/723.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_4" data-img="723%20(1).jpg">
+                                    <img src="img/theme/723.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_5" data-img="723%20(1).jpg">
+                                    <img src="img/theme/723.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_6" data-img="723%20(1).jpg">
+                                    <img src="img/theme/723.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_7" data-img="723%20(1).jpg">
+                                    <img src="img/theme/723.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_8 big_img" data-img="723%20(1).jpg">
+                                    <img src="img/theme/723.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_9" data-img="723%20(1).jpg">
+                                    <img src="img/theme/723.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_10" data-img="723%20(1).jpg">
+                                    <img src="img/theme/723.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_11" data-img="723%20(1).jpg">
+                                    <img src="img/theme/723.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="picture_item">
+                            <ul>
+                                <li class="img-item pos_0 big_img" data-img="721%20(1).jpg">
+                                    <img src="img/theme/721.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_1" data-img="722%20(1).jpg">
+                                    <img src="img/theme/722.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_2" data-img="723%20(1).jpg">
+                                    <img src="img/theme/723.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_3" data-img="724%20(1).jpg">
+                                    <img src="img/theme/724.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_4" data-img="725%20(1).jpg">
+                                    <img src="img/theme/725.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_5" data-img="726%20(1).jpg">
+                                    <img src="img/theme/726.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_6" data-img="727%20(1).jpg">
+                                    <img src="img/theme/727.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_7" data-img="728%20(1).jpg">
+                                    <img src="img/theme/728.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_8 big_img" data-img="729%20(1).jpg">
+                                    <img src="img/theme/729.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_9" data-img="730%20(1).jpg">
+                                    <img src="img/theme/730.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_10" data-img="731%20(1).jpg">
+                                    <img src="img/theme/731.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_11" data-img="732%20(1).jpg">
+                                    <img src="img/theme/732.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="picture_item">
+                            <ul>
+                                <li class="img-item pos_0  big_img" data-img="725%20(1).jpg">
+                                    <img src="img/theme/725.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_1" data-img="725%20(1).jpg">
+                                    <img src="img/theme/725.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_2" data-img="725%20(1).jpg">
+                                    <img src="img/theme/725.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_3" data-img="725%20(1).jpg">
+                                    <img src="img/theme/725.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_4" data-img="725%20(1).jpg">
+                                    <img src="img/theme/725.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_5" data-img="725%20(1).jpg">
+                                    <img src="img/theme/725.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_6" data-img="725%20(1).jpg">
+                                    <img src="img/theme/725.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_7" data-img="725%20(1).jpg">
+                                    <img src="img/theme/725.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_8 big_img" data-img="725%20(1).jpg">
+                                    <img src="img/theme/725.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_9" data-img="725%20(1).jpg">
+                                    <img src="img/theme/725.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_10" data-img="725%20(1).jpg">
+                                    <img src="img/theme/725.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_11" data-img="725%20(1).jpg">
+                                    <img src="img/theme/725.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="picture_item">
+                            <ul>
+                                <li class="img-item pos_0 big_img" data-img="726%20(1).jpg">
+                                    <img src="img/theme/726.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_1" data-img="726%20(1).jpg">
+                                    <img src="img/theme/726.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_2" data-img="726%20(1).jpg">
+                                    <img src="img/theme/726.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_3" data-img="726%20(1).jpg">
+                                    <img src="img/theme/726.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_4" data-img="726%20(1).jpg">
+                                    <img src="img/theme/726.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_5" data-img="726%20(1).jpg">
+                                    <img src="img/theme/726.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_6" data-img="726%20(1).jpg">
+                                    <img src="img/theme/726.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_7" data-img="726%20(1).jpg">
+                                    <img src="img/theme/726.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_8 big_img" data-img="726%20(1).jpg">
+                                    <img src="img/theme/726.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_9" data-img="726%20(1).jpg">
+                                    <img src="img/theme/726.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_10" data-img="726%20(1).jpg">
+                                    <img src="img/theme/726.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_11" data-img="726%20(1).jpg">
+                                    <img src="img/theme/726.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_5" data-img="726%20(1).jpg">
+                                    <img src="img/theme/726.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="picture_item">
+                            <ul>
+                                <li class="img-item pos_0 big_img" data-img="727%20(1).jpg">
+                                    <img src="img/theme/727.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_1" data-img="727%20(1).jpg">
+                                    <img src="img/theme/727.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_2" data-img="727%20(1).jpg">
+                                    <img src="img/theme/727.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_3" data-img="727%20(1).jpg">
+                                    <img src="img/theme/727.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_4" data-img="727%20(1).jpg">
+                                    <img src="img/theme/727.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_5" data-img="727%20(1).jpg">
+                                    <img src="img/theme/727.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_6" data-img="727%20(1).jpg">
+                                    <img src="img/theme/727.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_7" data-img="727%20(1).jpg">
+                                    <img src="img/theme/727.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_8 big_img" data-img="727%20(1).jpg">
+                                    <img src="img/theme/727.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_9" data-img="727%20(1).jpg">
+                                    <img src="img/theme/727.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_10" data-img="727%20(1).jpg">
+                                    <img src="img/theme/727.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                                <li class="img-item pos_11" data-img="727%20(1).jpg">
+                                    <img src="img/theme/727.jpg" alt="">
+                                    <div class="img-item-choose icon-choose"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="theme_show">
+                        <div class="theme_show_content">
+                            <div class="show_bg_img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="show_frame"></div>
+                        </div>
+                        <p class="show_item">背景皮肤效果预览</p>
+                    </div>
+                </div>
+            </div>
+            <div id="theme_base" class="theme_base"></div>
+        </div>
+    </div>
+
+
+</div>
+
+<script type="text/javascript" src="javascript/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="javascript/scriptSheet.js"></script>
+<!-- <script type="text/javascript" src="javascript/jsmodel.js"></script> -->
+</body>
+
+</html>

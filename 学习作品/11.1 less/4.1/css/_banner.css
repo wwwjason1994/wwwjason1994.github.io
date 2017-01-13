@@ -1,0 +1,71 @@
+.banner {
+    width: 750px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .img {
+    width: 7000px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.banner .img li {
+    float: left;
+}
+
+.banner .num {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    left: 0;
+    text-align: center;
+    font-size: 0;
+}
+
+.banner .num li {
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    display: inline-block;
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.banner .num li.on {
+    background: #35b558;
+    height: 16px;
+}
+
+.banner .button{
+    display: block;
+    width: 50px;
+    height: 80px;
+    background: url("../images/content/arrow_dd5a57d.png") no-repeat center;
+    background-size: 50px 80px;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    cursor: pointer;
+    text-align: center;
+    display: none;
+}
+.banner .button:hover{
+    background: url("../images/content/arrow-hover_5f6b80f.png") no-repeat center;
+    background-size: 50px 80px;
+}
+.banner:hover .button {
+    display: block;
+}
+
+.banner .btn_l {
+    left: 0;
+}
+
+.banner .btn_r {
+    right: 0;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}

@@ -1,0 +1,134 @@
+.backgroundImage(@url,@repeat: no-repeat,@position:center,@size:auto){
+	background: url(@url)  @repeat @position;
+    background-size: @size;
+}
+/*变量*/
+@jk-green: #35b558;
+
+/*底部部分-start*/
+footer{
+    min-width: 1000px;
+    border-top: 1px solid #e4e4e4;
+    background-color: #fff;
+}
+.jkinfor-block{
+	.jkinfor {
+	    position: relative;
+	    width: 1000px;
+	    height: 215px;
+	    margin: 0 auto;
+	    border-bottom: 1px solid #f5f5f5;
+	    padding-left: 224px;
+	    padding-top: 25px;
+	    box-sizing: border-box;
+	    .jk-logo {
+		    position: absolute;
+		    left: 0;
+		    top: 25px;
+		    display: inline-block;
+		    width: 160px;
+		    img {
+			    width: 109px;
+			    height: 40px;
+			    display: block;
+			}
+			p {
+			    font-size: 12px;
+			    color: #999;
+			    margin-top: 20px;
+			}
+		}
+		dl {
+		    width: 135px;
+		    color: #808080;
+		    float: left;
+		    dt {
+			    font-size: 14px;
+			    line-height: 30px;
+			}
+			dd {
+			    font-size: 12px;
+			    line-height: 30px;
+			    a {
+				    color: #999999;
+				    &:hover{
+					    color: @jk-green;
+					}
+				}
+			}
+		}
+	}
+}
+.jk-down {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    display: inline-block;
+    width: 175px;
+    text-align: left;
+    .hot-tel {
+	    color: #808080;
+	    font-size: 14px;
+	    margin-bottom: 20px;
+	}
+	.downCon {
+	    position: relative;
+	    display: inline-block;
+	    width: 100px;
+	    height: 30px;
+	    line-height: 30px;
+	    border: 1px solid #eeeeee;
+	    margin-bottom: 10px;
+	    color: #808080;
+	    font-size: 13px;
+	    padding-left: 40px;
+	    cursor: pointer;
+	}
+	.down-ios {
+	    .backgroundImage('../images/icon-down-ios.png',no-repeat,0 0,30px 30px)
+	}
+	.down-and {
+	    .backgroundImage('../images/icon-down-and.png',no-repeat,0 0,30px 30px)
+	}
+	.downCon{
+		img {
+		    width: 115px;
+		    height: 153px;
+		    position: absolute;
+		    top: -157px;
+		    left: 12px;
+		    z-index: 2;
+		    display: none;
+		}
+		&:hover img{
+			display: inline-block;
+		}
+	}
+}
+.copyright{
+    font-size: 12px;
+    color: #999;
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+    padding: 15px 0;
+    a{
+	    color: #999;
+	    &:hover {
+		    color: @jk-green;
+		}
+		&[class^="down"] {
+		    float: right;
+		    height: 15px;
+		    width: 20px;
+		}
+		&.down-wechat {
+		    .backgroundImage('../images/icon-down-wechat.png',no-repeat,0 0,18px 15px);
+		}
+		&.down-sina {
+		    .backgroundImage('../images/icon-down-sina.png',no-repeat,0 0,18px 15px)
+		}
+	}
+
+}
+/*底部部分-end*/
