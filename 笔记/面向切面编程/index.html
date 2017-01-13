@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>面向对象</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+/*
+面向对象的概念：
+1.一切事物皆对象
+2.对象具有封装和继承特性
+3.信息隐藏
+*/
+var person = {
+	name:"jason",
+	age:"20",
+	eat :function(){
+		alert('能吃')
+	}
+}
+alert(person.name);
+
+function Person(){}
+Person.prototype = {
+	name : 'jason',
+	age : '20',
+	say : function(){
+		alert('Hello!');
+	}
+}
+</script>
+
+<script type="text/javascript">
+//模拟类的实现
+(function(){//实现封装和隐藏
+	var n = "private"//私有属性外部不可访问
+	function People(_name){
+	this.name = _name;
+	}
+	People.prototype = {
+		say : function(){
+			alert('Hello P ' + this.name);
+		}
+	}
+	window.People = People;
+}());
+
+
+(function(){
+	function Student(_name){
+	this.name = _name;
+	}
+	Student.prototype = new People();//继承
+	var superSay = Student.prototype.say;
+	Student.prototype = {
+		say : function(){//复写父类方法
+			superSay.call(this);
+			alert('Hello S ' + this.name);
+		}
+	}
+	window.Student = Student;
+}());
+var s = new Student('jason');
+s.say();
+</script>
+
+<script type="text/javascript">
+//第二种面向对象实现方式
+(function(){
+	var n = "private"//私有属性外部不可访问
+	function People(_name){
+		var _this = {};
+		_this.name = _name;
+		_this.say = function(){
+			alert("Hello "+_this.name);
+		}
+		return _this;
+	}
+	window.People = People;
+}())
+
+function Teacher(_name){
+	var _this = People(_name);//继承
+	var superSay = _this.say;
+	_this.say = function(){//复写父类方法
+		superSay.call(_this);//父类方法调用
+		alert('Hello T '+_this.name);
+	}
+	return _this;
+}
+var t = Teacher('jason');
+t.say();
+
+</script>
+</body>
+</html>

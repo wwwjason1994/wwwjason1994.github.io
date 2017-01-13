@@ -1,0 +1,146 @@
+@import url(neat.min.css);
+
+html,body{
+    background-color: #f0f0f0;
+    font: 12px arial;
+    width: 100%;
+}
+a{
+    outline: none;
+    color:#333;
+}
+.cf:after,.cf{
+    clear: both;
+    zoom: 1;
+}
+/*定部*/
+header{
+    width: 100%;
+    min-width: 1000px;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 2px 2px 4px #eee;
+}
+header .header-container{
+    width: 100%;
+}
+header .s_tab{
+    padding-top: 12px;
+    margin-left: 194px;
+    font-size: 14px;
+    line-height: 30px;
+}
+header .baidu_logo{
+    float: left;
+    margin-right: 16px;
+    margin-left: 40px;
+    position: relative;
+    top: -17px;
+}
+.baidu_logo img{
+    width: 137px;
+    height: 46px;
+}
+header .search-box{
+    float: left;
+}
+.search-box form{
+    margin: 0 auto;
+    width: 640px;
+    overflow: hidden;
+}
+.search-box .text_bar{
+    width: 440px;
+    height: 33px;
+    border:1px solid #b3b6bb;
+    float: left;
+    _margin-right:-3px;
+    position: relative;
+    background: #fff;
+}
+.search-box .text_bar .text_s{
+    float: left;
+    _margin-right:-3px;
+    width:400px;
+    height: 33px;
+    border-style: none;
+    outline: none;
+    padding-left: 5px;
+}
+.search-box .text_bar .camera_icon{
+    width: 18px;
+    height: 16px;
+    background: url("../img/camera_new_5606e8f.png") no-repeat;
+    z-index: 10;
+    position: absolute;
+    right: 11px;;
+    top:50%;
+    margin-top: -8px;
+}
+.text_bar .camera_icon:hover{
+    background-position: 0 -20px;
+}
+.search-box .btnS{
+    float: left;
+    width:100px;
+    height: 35px;
+    padding:0;
+    font-size: 15px;
+    color: #fff;
+    background-color: #38f;
+    border:0;
+}
+.search-box .btnS:hover{
+    background-color: #317ef3;
+}
+/*主要内容*/
+.content{
+    width: 100%;
+    /*min-width: 1080px;*/
+    margin-top: 15px;
+}
+.content .container{
+    position: relative;
+    margin: 0 30px;
+}
+.content .container:after{
+    content: '';
+    clear: both;
+    zoom: 1;
+}
+.content .img-box{
+    float: left;
+    /*width: 19.9%;*/
+    width: 220px;
+    position: relative;
+}
+.content .img-box .box-content{
+    padding: 2px;
+}
+.content .img-box a{
+    display: inline-block;
+    position: relative;
+}
+.content .img-box img{
+    width: 100%;
+}
+.img-box .img-infor{
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;;
+    color: #fff;
+    width: 100%;
+    line-height: 30px;
+    height: 30px;
+    overflow: hidden;
+    background: rgba(0,0,0,.3);
+    background: linear-gradient(to top,rgba(0,0,0,.6) 0%,rgba(0,0,0,.3) 50%, rgba(0,0,0,.01) 100%);
+}
+.img-box .img-infor span{
+    margin-left: 10px;
+    text-overflow: ellipsis;
+}
+.img-box:hover .img-infor{
+    display: block;
+}
