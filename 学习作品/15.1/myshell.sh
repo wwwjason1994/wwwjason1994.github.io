@@ -1,25 +1,27 @@
 #!/bin/bash
-echo "shell successed";pm2 start  bin/www;
-# ÎŞÏŞÑ­»·
+myapp='app.js'
+address=./$myapp
+echo "shell successed";pm2 start $address;
+# æ— é™å¾ªç¯
 while true
 do
-		# »ñÈ¡ÄÚ´æÖĞ£¬º¬ÓĞwww×Ö·û£¬²»º¬ÓÊgrep×Ö·ûµÄĞĞµÚÈıÁĞµÄÖµ
-        j=$(ps aux|grep www|grep -v 'grep'|awk '{print $3}');
-        # ¼ä¸ô2Ãë
-        sleep 2;
-        # ÏÔÊ¾jµÄÖµ
-        echo "-------------j is $j -------------------";
-        # Éè·§ÖµÎª0.2
-        f=0.2
-        # ±È¶Ô£¬j>fÊä³ö0£¬·´Ö®Êä³ö1
-        # shellÀï²»ÄÜÖ±½ÓÔËËãĞ¡Êı£¬¿ÉÒÔÍ¨¹ıÕâ¸ö·½·¨¹æ±Ü¡£
-        val=$(expr $j \> $f)
-        echo $val
-        # ifÔËËã½áÎ²Òª¼Ófi ·½À¨ºÅÁ½±é¶¼ÒªÓĞ¿Õ¸ñ£¬ÄÚÈİ²»ÄÜ¼Ó¡°¡±
-        if [ $val -eq 0 ]
-        	then
-        		pm2 reload bin/www;
-        	else
-        		echo "safe";
-        fi		
+# è·å–å†…å­˜ä¸­ï¼Œå«æœ‰wwwå­—ç¬¦ï¼Œä¸å«é‚®grepå­—ç¬¦çš„è¡Œç¬¬ä¸‰åˆ—çš„å€¼
+j=$(ps aux|grep $myapp|grep -v 'grep'|awk '{print $3}');
+# é—´éš”2ç§’
+sleep 2;
+# æ˜¾ç¤ºjçš„å€¼
+echo "-------------j is $j -------------------";
+# è®¾é˜€å€¼ä¸º2
+f=2
+# æ¯”å¯¹ï¼Œj>fè¾“å‡º1ï¼Œåä¹‹è¾“å‡º0
+# shellé‡Œä¸èƒ½ç›´æ¥è¿ç®—å°æ•°ï¼Œå¯ä»¥é€šè¿‡è¿™ä¸ªæ–¹æ³•è§„é¿ã€‚
+val=$(expr $j \> $f)
+echo $val
+# ifè¿ç®—ç»“å°¾è¦åŠ fi æ–¹æ‹¬å·ä¸¤ééƒ½è¦æœ‰ç©ºæ ¼ï¼Œå†…å®¹ä¸èƒ½åŠ â€œâ€
+if [ $val -eq 1 ]
+then
+pm2 reload $address;
+else
+echo "safe";
+fi	
 done;
